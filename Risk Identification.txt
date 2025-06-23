@@ -1,0 +1,69 @@
+Risk Identification Of Ports
+
+
+High-Risk Ports & Services
+
+These ports/services are commonly exploited, often due to default configurations, weak authentication, or known vulnerabilities.
+
+
+|  Port     |  Service     |  Risk & Exploits                                                                                                                         |
+
+|  21       | FTP          | May allow  anonymous login  or  cleartext credentials . Vulnerable to  brute-force  or  directory traversal  attacks.                    |
+
+|  23       | Telnet       | Transmits data in  cleartext . Easily intercepted. Frequently targeted in IoT botnet attacks (e.g., Mirai).                              |
+
+|  512–514  | r-services   | Outdated Unix services (`rexec`, `rlogin`, `rsh`). No encryption,  trust-based authentication . Easy for attackers to spoof connections. |
+
+|  1099     | RMI Registry | Allows  Java object deserialization attacks , often  remote code execution (RCE) .                                                       |
+
+|  1524     | ingreslock   | Typically unused by modern systems. Known to be  left behind by malware or shells . Often a  backdoor .                                  |
+
+|  2049     | NFS          | Exposes file shares. If misconfigured, allows  unauthorized file access  or even  remote code execution .                                |
+
+|  6000     | X11          | Allows remote GUI access. Can lead to  keystroke logging  or  desktop hijacking  if not secured.                                         |
+
+|  8180     | HTTP-alt     | Unknown service, possibly a  web interface . Could be  Tomcat , custom admin panel, or vulnerable app.                                   |
+
+|-----------|--------------|------------------------------------------------------------------------------------------------------------------------------------------|
+
+Medium-Risk Ports & Services
+
+These services are typically secure when properly configured, but still commonly misconfigured or targeted
+
+
+|  Port     |  Service    |  Risk & Exploits                                                                                     |
+
+|  22       | SSH         | Brute-force attacks on weak credentials. Old versions vulnerable to  CVE exploits .                  |
+
+|  25       | SMTP        | May allow  open relay  or be vulnerable to  spoofing/phishing  if not secured.                       |
+
+|  53       | DNS         | If exposed externally, vulnerable to  DNS amplification attacks , zone transfers.                    |
+
+|  80       | HTTP        | Could expose a web server. Risk of  XSS ,  SQLi ,  LFI , or  admin panels .                          |
+
+|  111      | RPCbind     | Used to discover RPC services. Often the first step in  NFS or root-level  exploitation.             |
+
+|  139/445  | SMB         | Vulnerable to exploits like  EternalBlue (MS17-010) ,  SMBRelay , or  credential dumping .           |
+
+|  3306     | MySQL       | Exposed database. Brute-force,  SQL injection , or  unauthorized access  if no auth or weak creds.   |
+
+|  5432     | PostgreSQL  | Same as above –  data exfiltration  or  RCE  via SQL functions.                                      |
+
+|  5900     | VNC         | Remote desktop access. If not password protected or weak auth, allows  screen hijacking .            |
+
+|  8009     | AJP13       | Apache JServ Protocol. Vulnerable to  Ghostcat (CVE-2020-1938) , leading to  file read or RCE .      |
+
+|-----------|-------------|------------------------------------------------------------------------------------------------------|
+
+Low-Risk 
+
+These are not inherently insecure but should be monitored
+
+|  Port  |  Service    |  Notes                                                                  |
+
+|  2121  | ccproxy-ftp | Alternate FTP port – same risks as port 21.                             |
+
+|  8180  | HTTP-alt    | Needs further inspection. Could host vulnerable apps or admin consoles. |
+
+|--------|-------------|-------------------------------------------------------------------------|
+

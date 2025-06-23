@@ -1,0 +1,32 @@
+Open Ports That We Have Found Are :-
+
+IP Address :- 192.168.140.132
+
+PORT    	 STATE 
+21         	 open  
+22         	 open  
+23         	 open  
+25         	 open  
+53         	 open  
+80         	 open  
+111        	 open  
+139      	 open  
+445              open  
+512              open  
+513              open  
+514              open  
+1099             open  
+1524             open  
+2049             open  
+2121             open  
+3306             open  
+5432             open  
+5900             open  
+6000             open  
+6667             open  
+8009             open  
+8180             open
+
+
+MAC Address: 00:0C:29:75:72:19
+

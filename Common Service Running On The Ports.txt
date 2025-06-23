@@ -1,0 +1,54 @@
+Common Service Running On The Ports 
+
+
+All of these Ports are open my Metasploitable 2.0 Virtual Machine IP Address :- 192.168.140.132
+
+
+
+| Port     | Service Name       | 	Common Use / Description                                                                                                 |
+
+|  21    | FTP                  | File Transfer Protocol – used for transferring files between client and server. Often exploited if anonymous login is allowed. |
+
+|  22    | SSH                  | Secure Shell – encrypted remote login and command execution.                                                                   |
+
+|  23    | Telnet               | Insecure remote login protocol – replaced by SSH due to lack of encryption.                                                    |
+
+|  25    | SMTP                 | Simple Mail Transfer Protocol – used to send emails.                                                                           |
+
+|  53    | DNS                  | Domain Name System – translates domain names to IP addresses.                                                                  |
+
+|  80    | HTTP                 | HyperText Transfer Protocol – used for delivering web pages.                                                                   |
+
+|  111   | RPCbind              | Used by RPC (Remote Procedure Call) services – maps RPC program numbers to network addresses.                                  |
+
+|  139   | NetBIOS-SSN          | Windows file/printer sharing – NetBIOS Session Service.                                                                        |
+
+|  445   | Microsoft-DS         | SMB (Server Message Block) over TCP – file and printer sharing for Windows systems.                                            |
+
+|  512   | exec                 | Used by Unix r-services (like `rexec`) – remote command execution.                                                             |
+
+|  513   | login                | Remote login service (rlogin) – insecure, replaced by SSH.                                                                     |
+
+|  514   | shell                | Used by `rsh` (remote shell) – insecure remote command execution.                                                              |
+
+|  1099  | Java RMI Registry    | Java Remote Method Invocation – allows Java objects to communicate remotely.                                                   |
+
+|  1524  | ingreslock           | Associated with Ingres database or backdoor shells – often left open by exploits.                                              |
+
+|  2049  | NFS                  | Network File System – used for sharing files over a network.                                                                   |
+
+|  2121  | ccproxy-ftp          | Alternate FTP server port, often used by CCProxy or other proxies.                                                             |
+
+|  3306  | MySQL                | MySQL database server.                                                                                                         |
+
+|  5432  | PostgreSQL           | PostgreSQL database server.                                                                                                    |
+
+|  5900  | VNC                  | Virtual Network Computing – remote desktop protocol.                                                                           |
+
+|  6000  | X11                  | X Window System – used for remote GUI display on Unix/Linux.                                                                   |
+
+|  6667  | IRC                  | Internet Relay Chat – used for chat servers.                                                                                   |
+
+|  8009  | AJP13                | Apache JServ Protocol – links Tomcat to Apache HTTP server.                                                                    |
+
+|  8180  | HTTP-alt / Web Admin | Alternate HTTP – often a custom web interface (e.g. Tomcat Manager or Web Admin panel).                                        |
