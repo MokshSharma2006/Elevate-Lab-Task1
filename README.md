@@ -5,3 +5,7 @@
 
 I have used the NMMAP software in my Kali Linux Virtual Machine and  I have scanned my Metasploiable 2.0 machine 
 for Open Ports 
+
+# Ip Addreess Of Machine
+
+IP - 192.168.140.132
